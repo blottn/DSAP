@@ -114,7 +114,7 @@ class DSRWorld(World):
 
         self.enabled_location_categories.add(DSRLocationCategory.EVENT)
         self.enabled_location_categories.add(DSRLocationCategory.BOSS)
-        self.enabled_location_categories.add(DSRLocationCategory.ITEM_LOT)
+#        self.enabled_location_categories.add(DSRLocationCategory.ITEM_LOT)
         self.enabled_location_categories.add(DSRLocationCategory.BONFIRE_WARP)
         # self.enabled_location_categories.add(DSRLocationCategory.DOOR)
         if (self.options.fogwall_sanity.value == True):
