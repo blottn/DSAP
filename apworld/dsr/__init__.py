@@ -122,7 +122,11 @@ class DSRWorld(World):
         if (self.options.boss_fogwall_sanity.value == True):
             self.enabled_location_categories.add(DSRLocationCategory.BOSS_FOG_WALL)
 
-        self.all_excluded_locations.update(self.options.exclude_locations.value)
+        expanded_excludes = []
+        # this exclude_locations seems unused?
+        for loc in self.options.exclude_locations.value:
+            expanded_excludes += item_name_groups.get(loc, [loc])
+        self.all_excluded_locations.update(expanded_excludes)
 
 
     def create_regions(self):
